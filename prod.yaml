@@ -7,6 +7,9 @@ services:
         restart: unless-stopped
         environment:
             INITIAL_LANG: "$INITIAL_LANG"
+        volumes:
+            - ./odoo/custom:/opt/odoo/custom:ro,z
+            - ./odoo/auto/addons:/opt/odoo/auto/addons:rw,z
         depends_on:
             - db
             - smtp
