@@ -10,6 +10,7 @@ services:
         volumes:
             - ./odoo/custom:/opt/odoo/custom:ro,z
             - ./odoo/auto/addons:/opt/odoo/auto/addons:rw,z
+            - ./odoo/custom/src:/opt/odoo/custom/src:rw,z
         depends_on:
             - db
             - smtp
